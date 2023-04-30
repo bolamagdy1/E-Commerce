@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Login & Registeration</title>
+    <link href="Login&RegistrationnStyleSheet.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../download.ico">
+</head>
+<body>
+    <div class="container hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="button" onclick="showregister()">Register</button>
+                <button type="button" class="button" onclick="showlogin()">Login</button>
+            </div>
+            <div class="welcome">
+                <img class="jumia-img" src="test.png" alt="Alternate Text" />
+                <h4 class="jumia-welcome">Welcome</h4>
+            </div>
+            <form id="register" name="Register" class="input-form" method="post">
+                <input type="text" name="userName" class="input-field" placeholder="UserName"/>
+                <input type="email" name="Email" class="input-field" placeholder="E-Mail"/>
+                <input type="password" name="Password" class="input-field" placeholder="Password"/>
+                <input type="tel" name="Phone" class="input-field" placeholder="01000000000" />
+                <input type="text" name="Address" class="input-field" placeholder="Address" />
+                <br /><br />
+                <button type="submit" onclick="register(document.Register.Email, document.Register.Password, document.Register.userName, document.Register.Phone, document.Register.Address)" class="submit-btn">Register</button>
+            </form>
+            <form id="login" name="Login" class="input-form" method="post">
+                <input type="email" name="Email" class="input-field" placeholder="E-Mail" />
+                <input type="password" name="Password" class="input-field" placeholder="Password"/>
+                <input type="checkbox" class="check-box" /> <span>Remember Me</span>
+                <button type="submit" onclick="login(document.Login.Email, document.Login.Password)" class="submit-btn">Log in</button>
+            </form>
+        </div>
+    </div>
+    <script src="Login&RegistrationScript.js"></script>
+</body>
+</html>
